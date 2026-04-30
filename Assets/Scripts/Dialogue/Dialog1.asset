@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994732da4a4edaf4b8527c6f9018feb6, type: 3}
+  m_Name: Dialog1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - text: "Little one\u2026 your light has grown strong. The time has come for you
+      to begin your journey across the Skylands."
+    sound: {fileID: 8300000, guid: d9cbd0def86f7d44ca7e171f40d5892d, type: 3}
+  - text: "Remember what I taught you. The stars will guide your steps, but the path
+      ahead won\u2019t always be gentle"
+    sound: {fileID: 0}
+  - text: You will meet creatures in the sky islands some curious, some hostile.
+      Stay calm, trust your instincts.
+    sound: {fileID: 0}
+  - text: "If danger finds you, use your tail. Spin it with strength\u2026 press
+      F to unleash a strike that will push enemies away."
+    sound: {fileID: 8300000, guid: daffa50eff9a7514791774f15ae23703, type: 3}
+  - text: Do not fear the challenges ahead. Every star you gather will make you stronger,
+      and every trial will shape your destiny.
+    sound: {fileID: 8300000, guid: f3b49bcf416df35499f9390cee56aab1, type: 3}
+  - text: "Go now, little fox. The sky awaits you\u2026 and I will be watching over
+      your light from afar."
+    sound: {fileID: 8300000, guid: 7f757b76189fc554db686bf8d9d84359, type: 3}
