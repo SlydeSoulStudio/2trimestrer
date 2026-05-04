@@ -414,6 +414,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3232280938826217640, guid: 191795f33a86d3c439185fc9bf6ec2d3, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -601,8 +605,8 @@ MonoBehaviour:
 
     Thanks for playing'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 878167d112ed72c44ae3e08b454d16a4, type: 2}
-  m_sharedMaterial: {fileID: 1205044956930663751, guid: 878167d112ed72c44ae3e08b454d16a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2d7e1a8d92ac9c84c9bd364e314cb4e0, type: 2}
+  m_sharedMaterial: {fileID: -8721018099507898915, guid: 2d7e1a8d92ac9c84c9bd364e314cb4e0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1069,8 +1073,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'You got a '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 878167d112ed72c44ae3e08b454d16a4, type: 2}
-  m_sharedMaterial: {fileID: 1205044956930663751, guid: 878167d112ed72c44ae3e08b454d16a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2d7e1a8d92ac9c84c9bd364e314cb4e0, type: 2}
+  m_sharedMaterial: {fileID: -8721018099507898915, guid: 2d7e1a8d92ac9c84c9bd364e314cb4e0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1337,10 +1341,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Starlight
+  m_text: Starlight!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 878167d112ed72c44ae3e08b454d16a4, type: 2}
-  m_sharedMaterial: {fileID: 1205044956930663751, guid: 878167d112ed72c44ae3e08b454d16a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2d7e1a8d92ac9c84c9bd364e314cb4e0, type: 2}
+  m_sharedMaterial: {fileID: -8721018099507898915, guid: 2d7e1a8d92ac9c84c9bd364e314cb4e0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

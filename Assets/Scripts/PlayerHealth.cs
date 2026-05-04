@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 using Unity.Cinemachine;
@@ -11,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
 
     [Header("UI")]
     public TextMeshProUGUI healthText;
+    public Image heartFill; // ← NUEVO: referencia al corazón relleno
 
     [Header("Damage Effects")]
     public Renderer playerRenderer;
@@ -103,8 +105,13 @@ public class PlayerHealth : MonoBehaviour
 
     void UpdateHealthUI()
     {
+        // Si quieres mantener el número, lo dejamos
         if (healthText != null)
             healthText.text = "" + currentHealth;
+
+        // Actualizar el corazón relleno
+        if (heartFill != null)
+            heartFill.fillAmount = (float)currentHealth / maxHealth;
     }
 
     IEnumerator DieSequence()
@@ -128,7 +135,6 @@ public class PlayerHealth : MonoBehaviour
             Vector3 spawnPos = transform.position + Vector3.up * 0.5f;
             Instantiate(deathEffectPrefab, spawnPos, Quaternion.identity);
         }
-
 
         yield return null;
         AnimatorStateInfo state = anim.GetCurrentAnimatorStateInfo(0);

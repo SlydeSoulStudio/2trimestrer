@@ -27,6 +27,10 @@ public class EnemyHealth : MonoBehaviour
     [Header("Death VFX")]
     public GameObject deathParticles;
 
+    [Header("Drop Settings")]
+    public GameObject dropPrefab;   // objeto que va a spawnear al morir
+    public Vector3 dropOffset = new Vector3(0, 0.5f, 0); // lugar del spawn
+
     bool isDead = false;
     Color originalColor;
 
@@ -148,6 +152,11 @@ public class EnemyHealth : MonoBehaviour
         var box = GetComponent<BreakableBox>();
         if (box != null)
             box.BreakBox();
+
+        // spawn del objeto al morir
+        if (dropPrefab != null)
+            Instantiate(dropPrefab, transform.position + dropOffset, Quaternion.identity);
+
 
         Destroy(gameObject, destroyDelay);
     }
