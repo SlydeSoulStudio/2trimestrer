@@ -148,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8596f346ea0284b41bb900ae6f4ce276, type: 3}
       propertyPath: m_Name
-      value: Coin (99)
+      value: Big tear
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinPickup
   coinAmount: 10
-  pickupSound: {fileID: 8300000, guid: 138220eb6ae359e40bcbec49a61ea11c, type: 3}
+  pickupSound: {fileID: 8300000, guid: f47246303d3007c43bf27515650ea344, type: 3}
   pickupParticles: {fileID: 5160165043381322270, guid: f59514b3a6a8b31488308b23a81fb67a, type: 3}
 --- !u!65 &1166378337251934462
 BoxCollider:
