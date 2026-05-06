@@ -60,9 +60,10 @@ public class EnemyHealth : MonoBehaviour
             return;
         }
 
-        // sonido de impacto
-        if (audioSource != null && hitSound != null)
-            audioSource.PlayOneShot(hitSound);
+        // --- sonido de impacto desde el jugador ---
+        var playerAudio = FindObjectOfType<PlayerHealth>()?.GetComponent<AudioSource>();
+        if (playerAudio != null && hitSound != null)
+            playerAudio.PlayOneShot(hitSound);
 
         // animación de impacto (solo si hay animator)
         if (animator != null)
@@ -122,9 +123,10 @@ public class EnemyHealth : MonoBehaviour
         var follow = GetComponent<EnemyFollow2>();
         if (follow != null) follow.enabled = false;
 
-        // sonido de muerte
-        if (audioSource != null && deathSound != null)
-            audioSource.PlayOneShot(deathSound);
+        // --- sonido de muerte desde el jugador ---
+        var playerAudio = FindObjectOfType<PlayerHealth>()?.GetComponent<AudioSource>();
+        if (playerAudio != null && deathSound != null)
+            playerAudio.PlayOneShot(deathSound);
 
         // animación de muerte (solo si hay animator)
         if (animator != null)
@@ -156,7 +158,6 @@ public class EnemyHealth : MonoBehaviour
         // spawn del objeto al morir
         if (dropPrefab != null)
             Instantiate(dropPrefab, transform.position + dropOffset, Quaternion.identity);
-
 
         Destroy(gameObject, destroyDelay);
     }

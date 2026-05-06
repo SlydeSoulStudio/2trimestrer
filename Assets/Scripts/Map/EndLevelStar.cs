@@ -3,9 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class EndLevelStar : MonoBehaviour
 {
-    public AudioSource audioSource;
     public AudioClip starSound;
-    public GameObject starEffect;      //efecto visual
+    public GameObject starEffect;      // efecto visual
+    public int effectCount = 3;        // cuántos efectos spawnear
+    public float effectRadius = 0.5f;  // dispersión de los efectos
     public string sceneToLoad = "EndLevel1";
 
     bool triggered = false;
@@ -17,13 +18,26 @@ public class EndLevelStar : MonoBehaviour
 
         triggered = true;
 
-        // Instanciar efecto visual
-        if (starEffect != null)
-            Instantiate(starEffect, transform.position, Quaternion.identity);
+        // --- REPRODUCIR SONIDO DESDE EL JUGADOR ---
+        AudioSource playerAudio = other.GetComponent<AudioSource>();
+        if (playerAudio != null && starSound != null)
+            playerAudio.PlayOneShot(starSound);
 
-        // Reproducir sonido
-        if (audioSource != null && starSound != null)
-            audioSource.PlayOneShot(starSound);
+        // --- SPAWN DE VARIOS EFECTOS ---
+        if (starEffect != null)
+        {
+            for (int i = 0; i < effectCount; i++)
+            {
+                Vector3 randomPos = transform.position +
+                    new Vector3(
+                        Random.Range(-effectRadius, effectRadius),
+                        Random.Range(0f, effectRadius),
+                        Random.Range(-effectRadius, effectRadius)
+                    );
+
+                Instantiate(starEffect, randomPos, Quaternion.identity);
+            }
+        }
 
         // Esperar al sonido y cargar escena
         float delay = (starSound != null) ? starSound.length : 0f;
