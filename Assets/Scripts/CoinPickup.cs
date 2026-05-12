@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditor.Experimental.GraphView;
+using UnityEngine;
 
 public class CoinPickup : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class CoinPickup : MonoBehaviour
     public GameObject pickupParticles;
 
     private bool collected = false;
+    public int area = 0;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,6 +17,19 @@ public class CoinPickup : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             collected = true;
+            if (area == 1)
+            {
+                GameData.a1++;
+            }
+            else if (area == 2)
+            {
+                GameData.a2++;
+            }
+            else if (area == 3)
+            {
+                GameData.a3++;
+            }
+
 
             //sumar monedas al GameData
             GameData.coins += coinAmount;
